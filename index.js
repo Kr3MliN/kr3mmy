@@ -12,8 +12,6 @@ bot.on('ready', () => {
   });
 console.log("Ready");
 
-bot.registry.registerGroup('music', 'Music');
-bot.registry.registerCommandsIn(__dirname + '/commands');
 bot.registry.registerDefaults();
 
 global.servers = {};
@@ -44,5 +42,5 @@ bot.music.start(bot, {
 
 // Connect the bot with your Discord applications bot token.
 
-bot.login('MjY2NDQxMTY0OTc3MDc4Mjcy.D024gQ.dSBAXOPL3E0zidil7JUQqRVtTzc');
+bot.login(process.env.BOT_TOKEN);
     
